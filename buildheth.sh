@@ -37,6 +37,6 @@ sudo apt-get -y install libleveldb-dev
 
 ./build
 
-echo "export PATH=~/bin:~/.cabal/bin:/opt/ghc/7.8.4/bin:$PATH" >> .bashrc
+echo "export PATH=~/bin:~/.cabal/bin:/opt/ghc/7.8.4/bin:$PATH" >> ~/.bashrc
 source .bashrc
  
