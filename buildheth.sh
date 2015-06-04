@@ -43,7 +43,7 @@ sudo apt-get -y install libpq-dev
 sudo apt-get -y install libleveldb-dev
 
 sudo ./setup
-sudo ./build
+./build
 
 # Update PATH
 echo "export PATH=~/bin:~/.cabal/bin:/opt/ghc/7.8.4/bin:$PATH" >> ~/.bashrc
