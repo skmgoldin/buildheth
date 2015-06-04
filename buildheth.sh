@@ -42,7 +42,8 @@ cabal install alex happy
 sudo apt-get -y install libpq-dev
 sudo apt-get -y install libleveldb-dev
 
-./build
+sudo ./setup
+sudo ./build
 
 # Update PATH
 echo "export PATH=~/bin:~/.cabal/bin:/opt/ghc/7.8.4/bin:$PATH" >> ~/.bashrc
