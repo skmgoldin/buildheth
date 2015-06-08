@@ -14,7 +14,7 @@ sudo apt-get -y install git
 sudo apt-get -y install gpgv2
 
 # Install git-repo
-mkdir bin
+mkdir ~/bin
 curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 chmod a+x ~/bin/repo
 
