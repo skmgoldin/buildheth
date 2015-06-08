@@ -1,3 +1,5 @@
+OPATH=$PATH
+
 export PATH=~/bin:~/.cabal/bin:/opt/ghc/7.8.4/bin:$PATH
 
 echo --YOU WILL NEED TO ENTER SOME INFORMATION BEFORE LETTING THIS RUN!--
@@ -5,13 +7,16 @@ sleep 2
 echo --SO HOLD ON JUST A MINUTE BEFORE WALKING AWAY--
 sleep 5 
 
-# Initialize Ubuntu
-sudo apt-get update
-sudo apt-get -y upgrade
-
 # Get some important tools
 sudo apt-get -y install git
 sudo apt-get -y install gpgv2
+
+echo --Enter your global .gitconfig user.name--
+read -e name
+git config --global user.name $name
+echo --Enter your global .gitconfig user.email--
+read -e email
+git config --global user.email $email
 
 # Install git-repo
 mkdir ~/bin
@@ -25,6 +30,11 @@ cd hask
 repo init -u http://github.com/jamshidh/ethereumH
 echo --OKAY, NOW YOU CAN GO GET A COFFEE WHILE THIS RUNS.--
 sleep 5
+
+# Initialize Ubuntu
+sudo apt-get update
+sudo apt-get -y upgrade
+
 repo sync
 
 # Install ghc and cabal
@@ -46,6 +56,6 @@ sudo ./setup
 ./build
 
 # Update PATH
-echo "export PATH=~/bin:~/.cabal/bin:/opt/ghc/7.8.4/bin:$PATH" >> ~/.bashrc
+echo "export PATH=~/bin:~/.cabal/bin:/opt/ghc/7.8.4/bin:$OPATH" >> ~/.bashrc
 source ~/.bashrc
  
