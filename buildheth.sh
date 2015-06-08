@@ -47,5 +47,5 @@ sudo ./setup
 
 # Update PATH
 echo "export PATH=~/bin:~/.cabal/bin:/opt/ghc/7.8.4/bin:$PATH" >> ~/.bashrc
-source .bashrc
+source ~/.bashrc
  
