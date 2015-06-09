@@ -1,3 +1,5 @@
+# Hold on to the user's existing PATH so we don't double-append the ethereumH
+# stuff to their .bashrc at the end.
 OPATH=$PATH
 
 export PATH=~/bin:~/.cabal/bin:/opt/ghc/7.8.4/bin:$PATH
